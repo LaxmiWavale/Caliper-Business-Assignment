@@ -11,6 +11,7 @@ public class HydroponicFarmingApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HydroponicFarmingApplication.class, args);
+
 		System.out.println("connected to database!");
 	}
 
