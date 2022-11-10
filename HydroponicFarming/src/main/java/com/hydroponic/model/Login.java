@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Login {
 
-	private String userid;
+	private String mobileNumber;
 	private String password;
 
 	@Override
@@ -23,11 +23,11 @@ public class Login {
 		if (getClass() != obj.getClass())
 			return false;
 		Login other = (Login) obj;
-		return Objects.equals(password, other.password) && Objects.equals(userid, other.userid);
+		return Objects.equals(password, other.password) && Objects.equals(mobileNumber, other.mobileNumber);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(password, userid);
+		return Objects.hash(password, mobileNumber);
 	}
 }
