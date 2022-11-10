@@ -1,0 +1,16 @@
+#product_map{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+}
+.box{
+    background-color: white;
+}
+
+.Imgbox{
+    width: 100%;
+    box-sizing: border-box;
+}
