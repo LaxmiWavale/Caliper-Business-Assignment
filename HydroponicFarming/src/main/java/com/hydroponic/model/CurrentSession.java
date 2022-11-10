@@ -2,7 +2,6 @@ package com.hydroponic.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.validation.constraints.Pattern;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,14 +9,13 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Customer {
+@AllArgsConstructor
+public class CurrentSession {
 
 	@Id
-	@Pattern(regexp = "[6789]{1}[0-9]{9}", message = "Invalid Phone Number")
-	private String phone;
+	private String uniqueid;
+	private String userId;
 	private String name;
-	private String password;
 
 }

@@ -1,31 +1,34 @@
 package com.hydroponic.model;
 
-import javax.persistence.Entity;
+import java.util.List;
 
-//
-//@Setter
-//@Getter
-//@AllArgsConstructor
-//@NoArgsConstructor
-//@ToString
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 @Entity
 public class UserAccountDetails {
 
-//	@Id
-//	@JoinColumn(name = "uerId")
-//	private String id;
-//
-//	@OneToOne(cascade = CascadeType.ALL)
-//	@JoinColumn(name = "customerId")
-//	private Customer customer;
-//
-//	@OneToMany(cascade = CascadeType.ALL)
-//	private Set<Transaction> transactions;
-//
-//	@OneToMany(cascade = CascadeType.ALL)
-//	private Set<BankAccount> bankAccounts;
-//
-//	@OneToMany(cascade = CascadeType.ALL)
-//	private Set<Order> orders;
+	@Id
+	private String mobileNumber;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	private Customer customer;
+
+	@OneToMany(cascade = CascadeType.PERSIST)
+	private List<Products> productsList;
 
 }
